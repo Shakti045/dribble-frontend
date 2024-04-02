@@ -28,7 +28,7 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
-        <div className='  max-sm:hidden flex items-center gap-2'>
+        <div className='   flex items-center gap-2'>
           <div className='max-md:hidden  flex items-center gap-2 bg-slate-300   px-2 py-2 rounded-md'>
             <FaSearch className=' text-slate-400'/>
              <input type='text' placeholder='Search' className=' outline-none w-[100px] border-none bg-transparent'/>
@@ -36,8 +36,8 @@ const NavBar = () => {
           {
             user==null ? <Link to='/signup' className=' bg-pink-600 max-sm:p-1 text-white px-3 py-2 rounded-md'>Sign Up</Link>:<div className=' flex gap-2 items-center'>
               
-              <div className=' z-50  group flex gap-2 items-center'>
-              <img src={user.avatarurl} alt='useravatar' className=' w-[40px] h-[40px] rounded-md'/>
+              <div className=' max-sm:hidden z-50  group flex gap-2 items-center'>
+              <img src={user.avatarurl} alt='useravatar' className='  w-[40px] h-[40px] rounded-md'/>
                 <p className=' hidden lg:block  text-gray-600'>{user.username}</p>
                   <div className='  -z-30   hidden group-hover:block absolute top-12  right-[104px] h-[50px] w-[50px]  bg-slate-300 rounded-md  rotate-45'>
                   
@@ -52,17 +52,19 @@ const NavBar = () => {
                   </ul>
               </div>
 
-              <button onClick={logout} className='bg-pink-600 text-white px-3 py-2  rounded-md'>Log out</button>
+              <button onClick={logout} className=' max-sm:hidden bg-pink-600 text-white px-3 py-2  rounded-md'>Log out</button>
             </div>
           }
 
         </div>
-        <div className=' max-sm:block hidden '>
+        {
+          user!==null && <div className=' max-sm:block hidden '>
           <IoMenu onClick={()=>setOpendrawer(!opendrawer)} className=' text-3xl text-slate-400'/>
         </div>
+        }
      
           {
-            opendrawer && <SideDrawer open={opendrawer} setOpendrawer={setOpendrawer} />
+            opendrawer && <SideDrawer logout={logout} open={opendrawer} setOpendrawer={setOpendrawer} />
           }
        
     </nav>
