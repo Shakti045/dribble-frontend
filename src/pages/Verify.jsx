@@ -47,7 +47,7 @@ const Verify = () => {
          {
               loading && <>
                   <Loader/>
-                  <p className=' text-xl font-bold'>Please wait we are verifying your details.......</p>
+                  <p className=' text-center text-xl font-bold'>Please wait we are verifying your details.......</p>
               </>
          }
      
