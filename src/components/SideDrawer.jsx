@@ -36,9 +36,12 @@ const {user} = useSelector((state)=>state.user);
         <Link to='/profile'>View Profile</Link>
         </li>
         <li>
-        <Link to='/profilecreate?update=true' >Update Profile</Link>
+        <Link to='/profilecreate?update=true'>Update Profile</Link>
         </li>
        </ul>
+       {
+         user && <button onClick={logout} className=' bg-pink-600 text-white px-3 py-2  rounded-md'>Logout</button>
+       }
       </nav>
     </div>
   );
