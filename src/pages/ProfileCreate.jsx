@@ -3,11 +3,14 @@ import ProfileStepOne from '../components/ProfileStepOne'
 import ProfileStepTwo from '../components/ProfileStepTwo'
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 
 
 const ProfileCreate = () => {
   const [step,setStep] = useState(1);
+  const [searchParams] = useSearchParams();
+  const update = searchParams.get('update');
 
   const [details,setDetails] = useState({
     profilephoto:null,
@@ -24,7 +27,7 @@ const ProfileCreate = () => {
       }
       </div>
       {
-        step ===1 && <ProfileStepOne details={details} setDetails={setDetails} setStep={setStep}/>
+        step ===1 && <ProfileStepOne update={update} details={details} setDetails={setDetails} setStep={setStep}/>
       }
       {
         step ===2 && <ProfileStepTwo details={details} setDetails={setDetails} setStep={setStep}/>

@@ -4,7 +4,7 @@ import { toast } from 'react-hot-toast';
 
 
 
-const ProfileStepOne = ({setStep,setDetails,details}) => {
+const ProfileStepOne = ({setStep,setDetails,details,update}) => {
   function filechangehandler(e){
     const file=e.target.files[0];
     const reader = new FileReader();
@@ -22,7 +22,7 @@ const ProfileStepOne = ({setStep,setDetails,details}) => {
      <div className='  h-full flex flex-col   items-center'>
            <div className=' h-full  flex flex-col  justify-between '>
            <div>
-           <p className=' text-3xl font-bold'>Welcome! Let's create your profile</p>
+           <p className=' text-3xl font-bold'>{`Welcome! Let's ${update?'update':'create'} your profile`}</p>
            <p className=' text-slate-400'>Let's other know you better</p>
            </div>
            <div className=' flex flex-col  gap-4'>

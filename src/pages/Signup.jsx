@@ -5,7 +5,11 @@ import SignupForm from '../components/SignupForm'
 const Signup = () => {
   return (
     <div className=' w-full  min-h-[100vh] flex justify-between'>
-     <div className=" max-md:hidden bg-signupbg    min-h-[100vh] w-[40%] bg-center  bg-cover bg-no-repeat">
+     <div className=" bg-yellow-500  max-md:hidden bg-signupbg    min-h-[100vh] w-[40%] bg-center  bg-cover bg-no-repeat">
+     
+      <div className=' w-full flex justify-center'>
+     
+      </div>
      </div>
      <div className=' max-md:w-[100%]   w-[60%] '>
        <div className=' p-3 flex flex-col gap-10'>

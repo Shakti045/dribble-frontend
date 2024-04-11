@@ -17,7 +17,7 @@ const Footer = () => {
             <FaFacebookF className="hover:text-blue-700 cursor-pointer" />
         </div>
       </div>
-      <div className=' flex-1 grid grid-cols-5 max-sm:grid-cols-1 max-md:grid-cols-2  justify-between'>
+      <div className=' flex-1 grid grid-cols-5 max-sm:grid-cols-2 max-md:grid-cols-2  justify-between'>
       {
         footerlinks.map((item)=>{
             return <div className=' flex flex-col gap-3'>
@@ -38,7 +38,7 @@ const Footer = () => {
       </div>
       <div className=' flex max-sm:flex-col justify-between border-t-[1px]   border-slate-400 p-3 '>
         <p className=' text-center text-sm'>© 2021 Dribbble. All rights reserved.</p>
-        <p>20,145,635 shots dribbled</p>
+        <p className=' text-center'>20,145,635 shots dribbled</p>
       </div>
     </footer>
   );

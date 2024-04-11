@@ -47,7 +47,7 @@ const NavBar = () => {
                       <Link to='/profile' className='block p-2 hover:bg-slate-200'>View Profile</Link>
                     </li>
                     <li>
-                      <Link to='/profilecreate' className='block p-2 hover:bg-slate-200'>Update Profile</Link>
+                      <Link to='/profilecreate?update=true' className='block p-2 hover:bg-slate-200'>Update Profile</Link>
                     </li>
                   </ul>
               </div>
