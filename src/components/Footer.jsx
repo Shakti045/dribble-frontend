@@ -9,7 +9,7 @@ const Footer = () => {
       <div className=" w-full p-3    flex  max-sm:flex-col  gap-10">
       <div className=' flex flex-col gap-3'>
         <h1 className='font-bold text-2xl'>Dribble</h1>
-        <p className=' text-slate-400'>Drobble is the world's leading<br/> community for creatives<br></br> to share grow.and get hired</p>
+        <p className=' text-slate-400'>Dribble is the world's leading<br/> community for creatives<br></br> to share grow.and get hired</p>
         <div className="flex space-x-4">
             <FaDribbble className="hover:text-pink-500 cursor-pointer" />
             <FaTwitter className="hover:text-blue-500 cursor-pointer" />
